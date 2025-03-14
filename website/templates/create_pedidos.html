@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+{% block content %}
+<div class="">
+  <form method="POST" class="form-horizontal" name="order-form">
+    {% csrf_token %}
+    <div class="form-group my-3 row justify-content-center">
+      {{ form.clientes }}
+    </div>
+    <div class="form-group my-3 row justify-content-center">
+      {{ form.produtos }}
+      </div>
+    <div class="form-group my-3 mb-0 row justify-content-center">
+      {{ form.data_pedido }}
+    </div>
+    <small id="emailHelp" class="form-text text-muted row justify-content-center">Data do pedido</small>
+    <div class="form-group my-3 d-flex justify-content-center">
+      <button type="submit" class="btn btn-primary">+ Adicionar</button>
+    </div>
+  </form>
+</div>
+{% endblock %}

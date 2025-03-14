@@ -1,0 +1,33 @@
+{% extends "index.html" %}
+{% load static %}
+  {% block content %}
+<div class="card-group ">
+ <div class="card h-50 m-4 d-flex border-0 shadow-lg p-3 mb-5 bg-white rounded">
+   <img src="{% static 'img/businessman.png' %}" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">Adicionar cliente</h5>
+        <p class="card-text">Formulário para adicionar um novo cliente</p>
+        <a href="{% url 'createclientpage' %}" class="btn btn-primary">Escolher</a>
+      </div>
+  </div>
+
+ <div class="card h-50 m-4 d-flex border-0 shadow-lg p-3 mb-5 bg-white rounded">
+   <img src="{% static 'img/box.png' %}" class="card-img-top h-25">
+      <div class="card-body">
+        <h5 class="card-title">Adicionar produto</h5>
+        <p class="card-text">Formulário para adicionar um novo produto</p>
+        <a href="{% url 'createproductpage' %}" class="btn btn-primary">Escolher</a>
+      </div>
+  </div>
+
+ 
+ <div class="card h-50 m-4 d-flex border-0 shadow-lg p-3 mb-5 bg-white rounded">
+   <img src="{% static 'img/checkout.png' %}" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">Adicionar pedido</h5>
+        <p class="card-text">Formulário para adicionar um novo pedido</p>
+        <a href="{% url 'createorderpage' %}" class="btn btn-primary">Escolher</a>
+      </div>
+  </div>
+</div>
+{% endblock %}

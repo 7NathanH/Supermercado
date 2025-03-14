@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <script src="{% static 'js/script.js' %}"></script>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="{% url 'indexpage' %}">Inicio</a>
+      <a href="{% url 'createpage' %}">Criar</a>
+      <a href="{% url 'readpage' %}">Ler</a>
+    </nav>
+  </header>
+  <main>
+    {% block content %}
+
+    {% endblock %}
+  </main>
+</body>
+<style>
+
+/* Estilizando o corpo da página */
+body {
+  font-family: Arial, sans-serif; /* Fonte simples */
+  line-height: 1.6; /* Altura da linha para uma leitura mais confortável */
+  background-color: #f4f4f4; /* Cor de fundo suave */
+  color: #333; /* Cor do texto */
+}
+
+/* Estilizando o cabeçalho (header) */
+header {
+  background-color: #333; /* Cor de fundo do cabeçalho */
+  padding: 10px 0; /* Espaçamento interno */
+  text-align: center; /* Centraliza o conteúdo do cabeçalho */
+}
+
+/* Estilizando a barra de navegação (nav) */
+nav a {
+  color: white; /* Cor do texto */
+  text-decoration: none; /* Remove o sublinhado dos links */
+  padding: 10px 15px; /* Espaçamento dentro dos links */
+  margin: 0 10px; /* Espaçamento entre os links */
+  display: inline-block; /* Exibe os links em linha */
+  font-size: 16px; /* Tamanho da fonte */
+  border-radius: 5px; /* Bordas arredondadas */
+  transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+}
+
+/* Estilo para o link ao passar o mouse */
+nav a:hover {
+  background-color: #007bff; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilizando o conteúdo principal */
+main {
+  max-width: 1200px; /* Largura máxima do conteúdo */
+  margin: 20px auto; /* Centraliza o conteúdo e adiciona uma margem superior e inferior */
+  padding: 20px; /* Espaçamento interno */
+  background-color: white; /* Fundo branco para o conteúdo */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave para dar destaque */
+}
+
+/* Estilizando os links dentro do conteúdo */
+a {
+  color: #007bff; /* Cor azul para links dentro do conteúdo */
+  text-decoration: none; /* Remove o sublinhado */
+  font-weight: bold; /* Traz mais destaque ao link */
+}
+
+/* Estilizando o conteúdo no bloco */
+
+</style>
+</html>
+
+

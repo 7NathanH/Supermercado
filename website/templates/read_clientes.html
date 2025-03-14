@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+{% block content %}
+<div>
+  {% for c in clients %}
+  <div>
+    ID: {{ c.id }}
+    NOME: {{ c.nome }}
+    EMAIL: {{ c.email }}
+    TELEFONE: {{ c.telefone }}
+    <a href="{% url 'updateclientpage' c.id %}">Alterar</a>
+    <a href="{% url 'deleteclientpage' c.id %}">Excluir</a>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

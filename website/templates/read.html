@@ -1,0 +1,8 @@
+{% extends "index.html" %}
+{% block content %}
+<div>
+  <a href="{% url 'readclientpage' %}">Listar Clientes</a>
+  <a href="{% url 'readproductpage' %}">Listar Produtos</a>
+  <a href="{% url 'readorderpage' %}">Listar Pedidos</a>
+</div>
+{% endblock %}
