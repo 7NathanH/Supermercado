@@ -5,6 +5,7 @@ Supermercado é um website open-source que adiciona, visualiza, altera e exclui 
 # Tabela de Conteúdos
 
 * [Banco de Dados](/banco%204.sql)
+* [Modelo de Entidade e Relacionamento](/diagrama.png)
 
 # Banco de Dados
 
